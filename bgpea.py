@@ -1,3 +1,4 @@
+#Implementation of Blum-Goldwasser cryptosystem for Cryptography I 
 #Written by: Todd Louison
 
 #Please make sure to install 
@@ -6,10 +7,12 @@ try:
 except ImportError:
     print("You must install the gmpy package for this script to run.")
     quit()
+    
 import math
 import numpy
 import random
 
+#Defining given constants
 P = 499
 Q = 547
 A = -57
@@ -17,9 +20,11 @@ B = 52
 
 m = '10011100000100001100'
 
+#Takes a list of binary integers and concatenates them all into a string
 def printableList(l):
     return ''.join([str(x) for x in l])
 
+#Computes the B list, gathering the least significant bits of x_i
 def computeB():
     global X
     #Generating bits for BBS

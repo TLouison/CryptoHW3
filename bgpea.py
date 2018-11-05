@@ -96,4 +96,3 @@ if __name__ == "__main__":
     print("Alice deciphered to:\t", printableList(new_m))
     print("Original message was:\t", printableList(m))
     print("=====================================================\n")
-
